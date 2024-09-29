@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/Asikurbd/pagination/pagination.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/gh/Asikurbd/pagination/pagination.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Asikurbd/pagination/pagination.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>Filter Anything</h2>
+<p>Type something in the input field to search for a specific text inside the div element with id="myDIV":</p>
+<input id="myInput" type="text" placeholder="Search..">
+
+<div id="myDIV">
+<p>Asikur Rahman</p>
+<p>Raju Ahmed</p>
+<p>Afsana Sarmin</p>
+<p>Rihima begum</p>
+<p>Parul Sumi</p>
+<p>Bokto Khan</p>
+<p>Sumi Lalla</p>
+
+
+
+
+</div>
+
+</body>
+</html>
